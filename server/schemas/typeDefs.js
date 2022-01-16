@@ -23,6 +23,7 @@ const typeDefs = gql`
   type Game {
     gameId: String
     title: String
+    description: String
     image: String
     releaseDate: String
     rating: String
@@ -31,6 +32,7 @@ const typeDefs = gql`
   input savedGame {
     gameId: String
     title: String
+    description: String
     image: String
     releaseDate: String
     rating: String

@@ -13,6 +13,9 @@ const gameSchema = new Schema({
   image: {
     type: String,
   },
+  description: {
+    type: String,
+  },
   releaseDate: {
     type: String,
     required: true,

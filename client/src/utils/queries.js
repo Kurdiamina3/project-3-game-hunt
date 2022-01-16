@@ -10,6 +10,7 @@ export const GET_ME = gql`
       savedGames {
         gameId
         title
+        description
         image
         releaseDate
         rating

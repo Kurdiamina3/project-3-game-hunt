@@ -41,6 +41,7 @@ export const SAVE_GAME = gql`
       savedGames {
         gameId
         title
+        description
         image
         releaseDate
         rating
@@ -59,6 +60,7 @@ export const REMOVE_GAME = gql`
       savedGames {
         gameId
         title
+        description
         image
         releaseDate
         rating
