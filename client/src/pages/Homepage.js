@@ -9,6 +9,9 @@ import { SAVE_GAME } from '../utils/mutations';
 import Main from '../components/Main';
 
 // import { API_KEY } from '../../'
+require('dotenv').config()
+
+console.log(process.env.API_KEY)
 
 const Homepage = () => {
   // create state for holding returned google api data
@@ -20,6 +23,7 @@ const Homepage = () => {
   const [savedGameIds, setSavedGameIds] = useState(getSavedGameIds());
 
   const [saveGame] = useMutation(SAVE_GAME);
+
 
 
   // set up useEffect hook to save `savedGameIds` list to localStorage on component unmount
@@ -41,6 +45,8 @@ const Homepage = () => {
       const response = await fetch(
         `https://api.rawg.io/api/games?search=${searchInput}&key=65f84827e818425688a7edfcb6ab1f5f`
       );
+
+
 
       if (!response.ok) {
         throw new Error('something went wrong!');
